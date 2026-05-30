@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="city-input" placeholder="Enter City Name (e.g. London)">
+            <button id="search-btn">Search</button>
+        </div>
+
+        <div id="error-msg" class="hidden">City not found. Please try again.</div>
+
+        <div id="weather-container" class="weather-card hidden">
+            
+            <div class="weather-header">
+                <div class="location-date">
+                    <h2 id="city-name">Lucknow</h2>
+                    <p id="current-date">Tuesday, 14 Oct</p>
+                </div>
+                <div class="temp-condition">
+                    <img id="weather-icon" src="" alt="Weather Icon">
+                    <h1 id="temp-display">--°C</h1>
+                    <p id="condition-text">--</p>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <i class="fa-solid fa-droplet"></i>
+                    <span>Humidity</span>
+                    <p id="humidity-val">--%</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fa-solid fa-wind"></i>
+                    <span>Wind Speed</span>
+                    <p id="wind-val">-- km/h</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fa-solid fa-temperature-high"></i>
+                    <span>Dew Point</span>
+                    <p id="dew-val">--°C</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fa-solid fa-sun"></i>
+                    <span>UV Index</span>
+                    <p id="uv-val">--</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fa-solid fa-eye"></i>
+                    <span>Visibility</span>
+                    <p id="vis-val">-- km</p>
+                </div>
+            </div>
+
+            <div class="aqi-section">
+                <h3><i class="fa-solid fa-wind"></i> Air Quality Index (AQI)</h3>
+                <div class="aqi-grid">
+                    <div class="aqi-box">
+                        <span class="label">PM2.5</span>
+                        <span id="pm25-val" class="value">--</span>
+                    </div>
+                    <div class="aqi-box">
+                        <span class="label">PM10</span>
+                        <span id="pm10-val" class="value">--</span>
+                    </div>
+                    <div class="aqi-box">
+                        <span class="label">CO</span>
+                        <span id="co-val" class="value">--</span>
+                    </div>
+                    <div class="aqi-box">
+                        <span class="label">NO2</span>
+                        <span id="no2-val" class="value">--</span>
+                    </div>
+                    <div class="aqi-box">
+                        <span class="label">O3</span>
+                        <span id="o3-val" class="value">--</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="loader" class="loader hidden"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
